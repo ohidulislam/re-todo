@@ -1,0 +1,133 @@
+* {
+	box-sizing: border-box;
+	padding: auto;
+	margin: 0;
+}
+
+.App {
+	text-align: center;
+	height: 100vh;
+	background: linear-gradient(45deg, rgba(40, 93, 255, 0.9), rgba(199, 219, 255, 0.9)), url(./assets/images/bg.jpg);
+}
+
+.App-logo {
+	height: 40vmin;
+	pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	.App-logo {
+		animation: App-logo-spin infinite 20s linear;
+	}
+}
+
+.App-header {
+	background-color: #282c34;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: calc(10px + 2vmin);
+	color: white;
+}
+
+.App-link {
+	color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+.todo-form input {
+	max-width: 700px;
+	width: 100%;
+	padding: 15px 20px;
+	border: 1px solid #cdcdcd;
+	border-radius: 5px;
+	margin-top: 20%;
+	position: relative;
+	font-size: 20px;
+	color: #494949;
+	margin-bottom: 30px;
+}
+.todo-form input:focus {
+	outline-color: #285dff;
+}
+.todo-form input::placeholder {
+	color: #c9c8c8;
+	font-style: italic;
+}
+
+.todo-item {
+	position: relative;
+	background-color: #fff;
+	border-radius: 5px;
+	padding: 15px 90px 15px 20px;
+	font-size: 14px;
+	max-width: 680px;
+	width: 100%;
+	margin: 0 auto 10px;
+	box-shadow: 4px 5px 15px rgba(0, 0, 0, 0.1);
+	display: flex;
+	justify-content: flex-start;
+	overflow: hidden;
+}
+
+.todo-item span {
+	font-size: 16px;
+	font-weight: 500;
+	font-style: italic;
+	display: inline-block;
+	position: relative;
+	padding-left: 20px;
+	text-transform: capitalize;
+	text-align: left;
+	word-break: break-all;
+}
+
+.todo-item span:before {
+	content: "";
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	border: 2px solid #00a8ac;
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.todo-item .completed {
+	text-decoration: line-through;
+}
+.todo-item .completed::before {
+	content: "";
+	background-color: #00a8ac;
+}
+.actions {
+	position: absolute;
+	right: -100px;
+	transition: all 300ms ease-in-out;
+	/* opacity: 0;
+	visibility: hidden; */
+}
+.actions button {
+	background: transparent;
+	border: none;
+	cursor: pointer;
+}
+.actions button img {
+	max-width: 20px;
+}
+
+.todo-item:hover .actions {
+	visibility: visible;
+	opacity: 1;
+	right: 10px;
+}
