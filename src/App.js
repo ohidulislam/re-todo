@@ -19,13 +19,7 @@ function reducer(todos, action) {
 
 function App() {
 	const [title, setTitle] = useState("");
-	const [todos, dispatch] = useReducer(reducer, [
-		{ id: 1635785671453, title: "Need to add search bar", complete: false },
-		{ id: 1635785738404, title: "need to add calendar picker for individual todo", complete: false },
-		{ id: 1635785843041, title: "Need to add history list", complete: false },
-		{ id: 1635786086775, title: "Need to add priority option and priority filter", complete: false },
-		{ id: 1635786100631, title: "Drag and drop feature", complete: false },
-	]);
+	const [todos, dispatch] = useReducer(reducer, []);
 
 	const handleFormSubmit = (e) => {
 		e.preventDefault();
