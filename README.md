@@ -1,4 +1,4 @@
-# This is a practice project - Todo app, using useReducer hook. You can see demo here: https://redu-todo.netlify.app/
+## This is a practice project - Todo app, using useReducer hook. You can see demo here: https://redu-todo.netlify.app/
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
